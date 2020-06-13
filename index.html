@@ -32,7 +32,9 @@
             <li class="item">
               <a href="./portfolio.html" class="link">Портфолио</a>
             </li>
-            <li class="item"><a href="" class="link">Контакты</a></li>
+            <li class="item">
+              <a href="" class="link">Контакты</a>
+            </li>
           </ul>
         </nav>
 
@@ -67,26 +69,6 @@
         <div class="hero-main">
           <h1 class="hero-title">эффективные решения для вашего бизнеса</h1>
           <button class="button" data-modal-open>Заказать услугу</button>
-          <div class="backdrop is-hidden" data-modal>
-            <div class="modal">
-              <form class="js-speaker-form">
-                <label for="name">Имя</label>
-                <input type="text" name="name" id="name" />
-
-                <label for="tel">Телефон</label>
-                <input type="tel" name="tel" id="tel" />
-
-                <label for="mail">Почта</label>
-                <input type="email" name="mail" id="mail" />
-
-                <input type="text" />
-
-                <input type="text" />
-                <button class="close-form" data-modal-close></button>
-                <button class="button">Отправить</button>
-              </form>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -402,6 +384,80 @@
       </section>
     </main>
 
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <form class="form js-speaker-form" autocomplete="off">
+          <b>Оставьте свои данные, мы вам перезвоним</b>
+
+          <label class="form-field">
+            <input type="text" name="name" placeholder=" " class="form-input" />
+            <span class="form-label" for="name">Имя</span>
+            <span class="icon">
+              <svg class="form-icon">
+                <use href="./images/symbol-defs.svg#form-person-icon"></use>
+              </svg>
+            </span>
+          </label>
+
+          <label class="form-field">
+            <input type="tel" name="tel" placeholder=" " class="form-input" />
+            <span class="form-label" for="tel">Телефон</span>
+            <span class="icon">
+              <svg class="form-icon">
+                <use href="./images/symbol-defs.svg#form-tel-icon"></use>
+              </svg>
+            </span>
+          </label>
+
+          <label class="form-field">
+            <input
+              type="email"
+              name="mail"
+              placeholder=" "
+              class="form-input"
+            />
+            <span class="form-label" for="mail">Почта</span>
+            <span class="icon">
+              <svg class="form-icon">
+                <use href="./images/symbol-defs.svg#form-mail-icon"></use>
+              </svg>
+            </span>
+          </label>
+
+          <label class="form-field">
+            <textarea
+              name="comment"
+              placeholder=" "
+              class="form-input"
+              rows="6"
+            ></textarea>
+            <span class="form-label comment" for="comment">Комментарий</span>
+          </label>
+
+          <div>
+            <label class="checkbox-label">
+              <input
+                class="checkbox"
+                type="checkbox"
+                name="agreement"
+                value="agreed"
+              />
+              <span class="icon"></span>
+              <div>
+                Соглашаюсь с рассылкой и принимаю
+                <a href="" class="link">Условия договора</a>
+              </div>
+            </label>
+          </div>
+
+          <button class="close-form" data-modal-close></button>
+          <button type="submit" class="button" data-modal-close>
+            Отправить
+          </button>
+        </form>
+      </div>
+    </div>
+
     <!-- footer -->
     <footer class="footer">
       <div class="container">
@@ -457,13 +513,14 @@
             </ul>
           </div>
 
-          <div class="submit">
+          <div class="footer-submit">
             <b>подписаться на рассылку</b>
             <form class="js-speaker-form">
-              <input type="email" name="mail" />
+              <label class="footer-form-label">
+                <input type="email" name="mail" placeholder="E-mail" />
+              </label>
               <button type="submit" class="button">
-                Подписаться
-                <svg class="send">
+                Подписаться<svg class="send">
                   <use href="./images/symbol-defs.svg#send"></use>
                 </svg>
               </button>
@@ -476,7 +533,7 @@
     </footer>
 
     <script src="./js/modal.js"></script>
-    <script>
+    <!-- <script>
       (() => {
         document
           .querySelector('.js-speaker-form')
@@ -490,6 +547,6 @@
             e.currentTarget.reset();
           });
       })();
-    </script>
+    </script> -->
   </body>
 </html>
