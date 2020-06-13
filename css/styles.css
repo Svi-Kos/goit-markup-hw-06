@@ -476,11 +476,15 @@ img {
 }
 
 .checkbox {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-
   position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0px;
+  padding: 0px;
+  clip: rect(0 0 0 0);
+
+  overflow: hidden;
 }
 
 .checkbox-label {
@@ -499,6 +503,7 @@ img {
   height: 15px;
   border: 2px solid var(--primary-text-color);
   border-radius: 2px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .checkbox:checked + .icon {
